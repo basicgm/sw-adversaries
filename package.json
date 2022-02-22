@@ -21,9 +21,6 @@
     "start": "next start"
   },
   "author": "Stoo Goff",
-  "contributors": [
-    "The Basic GM <eric@basicgm.com> (https://github.com/basicgm)"
-  ],
   "license": "ISC",
   "private": true
 }
