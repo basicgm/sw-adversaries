@@ -1,192 +1,105 @@
 
 # Star Wars: Adversaries
 
-A simple web app for looking up adversaries for the FFG's Star Wars RPG. See it in action here: http://swa.stoogoff.com/.
+A simple web app for looking up adversaries for the FFG's Star Wars RPG.
+
+See [the original](https://github.com/stoogoff/sw-adversaries) in action [here](http://swa.stoogoff.com/).
 
 Built using:
 
-- [Babel](https://babeljs.io)
+- [Next.js](https://nextjs.org/)
 - [React](https://facebook.github.io/react/)
-- [Gulp](http://gulpjs.com/)
 - Icons by [IcoMoon](https://icomoon.io/app/)
 - Dice font from [FantasyFlightIcons](https://github.com/aflegel/FantasyFlightIcons)
 
-## Structure
-
-- build - build using gulp and babel
-- dev - development version, created by gulp
-- live - live version, created by gulp, everything is minified
-- src - source code
-	- src/media - all assets
-		- src/media/data - JSON files containing adversary data
-		- src/media/fonts - Star Wars dice font
-		- src/media/js - all javascript
-			- src/media/js/components - React components
-			- src/media/js/lib - config and utilities
-		- src/media/sass - sass stylesheet
-
-## Install and Build
-
-In the build directory run `npm install`. Once everything has installed run any of the following:
-
-- `gulp dev clean` Delete the dev directory and start afresh.
-- `gulp dev build` Completely build the project into the dev directory.
-- `gulp watch` Watch files for changes and rebuild as necessary.
-
-For Windows:
-
-- Download npm from https://nodejs.org/en/download/.
-- Add C:\Program Files\nodejs\ to your path.
-- Switch to your build directory and run `npm install`.
-- Then run `npm install react@16.12.0`, and then `npm install react-dom@16.12.0`.
-- To build from the build directory, run node_modules\.bin\gulp dev build, or node_modules\.bin\gulp live build.
-
-## Host Locally
-
-For Windows:
-
-- In the build directory, run `npm install http-server -g`
-- Run `http-server ../dev -c-1 -p 8010` to start a local server on port 8010 with no caching. In your browser, navigate to http://localhost:8010
-- If you want to see changes reflected immediately, open a new Powershell/CMD window and run `gulp dev watch` in the build directory
-- Change any of the watched files (including the JSON data files) and refresh the browser to see the changes
-
-Alternatively, if you have python installed run `npm run server` from the build directory. This will start a web server using `python -m SimpleHTTPServer` with the ../dev directory as the root.
-
-## Gulp
-
-Main tasks:
-
-`live` Output to the live directory and minify Javascript and CSS.
-
-`dev` Output to the dev directory as is. This is the default action.
-
-`clean` Delete the output directory.
-
-`build` Build everything and save to the output directory.
-
-`watch` After the `dev` task has completed watch all HTML, JS, SASS and JSON files for changes.
-
-`deploy` After the `live` task has completed deploy to an AWS bucket. Target and authentication details need to be placed in a file called aws.json in the build directory. The format for this is:
-
-``` JSON
-{
-	"key": "AUTH_KEY",
-	"secret": "AUTH_SECRET",
-	"bucket": "BUCKET_NAME",
-	"region": "REGION"
-}
-
-```
-
-This is only useful if you have your own AWS setup and are planning on hosting a copy yourself.
-
 ## Completed Adversaries
 
-- core books
-	- Age of Rebellion
-	- Edge of the Empire
-	- Force and Destiny
-- gm kits
-	- EotE (Debts to Pay)
-	- AoR (Dead in the water)
-	- Fad (Hidden Depths)
-- source books
-	- Lords of Nal Hutta
-	- Strongholds of Resistance
-	- Suns of Fortune
-	- Nexus of Power
-	- Dawn of Rebellion
-	- Rise of the Separatists
-	- Collapse of the Republic
-- collected source books
-	- Allies and Adversaries
-	- Gadgets and Gear
-- career books
-	- *Dangerous Covenants (no stats)*
-	- Enter the Unknown (5 droids)
-	- Desparate Allies
-	- Endless Vigil
-	- Far Horizons
-	- *Fly Casual (no stats)*
-	- *Forged in Battle (no stats)*
-	- Keeping the Peace
-	- Knights of Fate
-	- Lead by Example
-	- *No Disintegrations (no stats)*
-	- Savage Spirits
-	- Special Modifications
-	- Stay on Target
-	- *Unlimited Power (no stats)*
-	- Fully Operational
-	- Cyphers and Masks
-	- Disciples of Harmony
-- beginner's games
-	- Age of Rebellion (Takeover at Whisper Base)
-	- Edge of the Empire (Escape from Mos Shuuta)
-	- Force and Destiny (Mountaintop Rescue)
-	- The Force Awakens (Discovery on Jakku)
-- adventure books
-	- Beyond the Rim
-	- Chronicles of the Gatekeeper
-	- Jewel of Yavin
-	- Friends Like These
-	- Ghosts of Dathomir
-	- Mask of the Pirate Queen
-	- Onslaught at Arda I
-	- Rescue at Glare Peak
-	- Under a Black Sun
-- adventures
-	- A Call for Heroes (TFA follow on adventure)
-	- A Deal Gone Wrong
-	- A Quick Stopover
-	- Beyond the Boiling Sea
-	- Beyond the Rim
-	- Crates of Krayts (EotE Beta adventure)
-	- Chronicles of the Gatekeeper
-	- Claustrophobia
-	- Conical Six Summit
-	- Dead in the Water (AoR GM Kit)
-	- Debts to Pay (EotE GM Kit)
-	- Escape from Mos Shuuta
-	- Exploring the Acablas Ruins
-	- Friends Like These
-	- Ghosts of Dathomir
-	- Hard Bargain
-	- Hidden Depths (FaD GM Kit)
-	- If It Sounds too Good to be True...
-	- In Too Deep
-	- Jewel of Yavin
-	- Lessons from the Past
-	- Long Arm of the Law
-	- Lost Knowledge (FaD Beta adventure)
-	- Mask of the Pirate Queen
-	- Onslaught at Arda I
-	- Operation Shadowpoint (AoR follow on adventure)
-	- Operation: Shell Game (AoR Beta game)
-	- Perlemian Haul
-	- Phantoms in the Dark
-	- Rescue at Glare Peak
-	- Rubbing Slimy Elbows
-	- Sabacc Game on the Row
-	- Taming the Dragon
-	- Takeover at Whisper Base
-	- The Corellian Shuffle
-	- The Dead Road
-	- The Geharr Incident
-	- The Long Arm of the Hutt (EotE follow on adventure)
-	- The Light Within
-	- The Menagerie
-	- The Trial of Skill
-	- Toydarian Grocery Shopping
-	- Trouble Brewing
-	- Tunnel Delving
-	- Under a Black Sun
-	- Vault of Justice
-	- Welcome Aboard
-	- Witch’s Wrath
-	- Lure of the Lost (FaD follow on adventure)
-
-## TODO
-
-- Print multiple tabs
-- Collapse of the Republic
+- Core Books
+    - [x] Age of Rebellion
+    - [x] Edge of the Empire
+    - [x] Force and Destiny
+- GM Kits
+    - [x] Dead in the Water (AoR)
+    - [x] Debts to Pay (EotE)
+    - [x] Hidden Depths (FaD)
+- Beginner Games
+    - [x] Discovery on Jakku
+    - [x] Escape from Mos Shuuta (EotE)
+    - [x] Mountaintop Rescue (FaD)
+    - [x] Takeover at Whisper Base (AoR)
+- Compendium Books
+    - [x] Allies and Adversaries
+    - [x] Gadgets and Gear
+- Career Books
+    - [x] Cyphers and Masks
+    - [x] *Dangerous Covenants (no stats)*
+    - [x] Desparate Allies
+    - [x] Disciples of Harmony
+    - [x] Endless Vigil
+    - [x] Enter the Unknown (5 droids)
+    - [x] Far Horizons
+    - [x] *Forged in Battle (no stats)*
+    - [x] *Fly Casual (no stats)*
+    - [x] Fully Operational
+    - [x] Keeping the Peace
+    - [x] Knights of Fate
+    - [x] Lead by Example
+    - [x] *No Disintegrations (no stats)*
+    - [x] Savage Spirits
+    - [x] Special Modifications
+    - [x] Stay on Target
+    - [x] *Unlimited Power (no stats)*
+- Era Books
+    - [x] Collapse of the Republic
+    - [x] Dawn of Rebellion
+    - [x] Lords of Nal Hutta
+    - [x] Nexus of Power
+    - [x] Rise of the Separatists
+    - [x] Strongholds of Resistance
+    - [x] Suns of Fortune
+- Adventure Books
+    - [x] A Call for Heroes
+    - [x] A Deal Gone Wrong
+    - [x] A Quick Stopover
+    - [x] Beyond the Boiling Sea
+    - [x] Beyond the Rim
+    - [x] Chronicles of the Gatekeeper
+    - [x] Claustrophobia
+    - [x] Conical Six Summit
+    - [x] Crates of Krayts
+    - [x] Escape from Mos Shuuta
+    - [x] Exploring the Acablas Ruins
+    - [x] Friends Like These
+    - [x] Ghosts of Dathomir
+    - [x] Hard Bargain
+    - [x] If It Sounds too Good to be True...
+    - [x] In Too Deep
+    - [x] Jewel of Yavin
+    - [x] Lessons from the Past
+    - [x] Long Arm of the Law
+    - [x] Lost Knowledge
+    - [x] Lure of the Lost
+    - [x] Mask of the Pirate Queen
+    - [x] Onslaught at Arda I
+    - [x] Operation: Shadowpoint
+    - [x] Operation: Shell Game
+    - [x] Perlemian Haul
+    - [x] Phantoms in the Dark
+    - [x] Rescue at Glare Peak
+    - [x] Rubbing Slimy Elbows
+    - [x] Sabacc Game on the Row
+    - [x] Taming the Dragon
+    - [x] The Corellian Shuffle
+    - [x] The Dead Road
+    - [x] The Geharr Incident
+    - [x] The Light Within
+    - [x] The Long Arm of the Hutt
+    - [x] The Menagerie
+    - [x] The Trial of Skill
+    - [x] Toydarian Grocery Shopping
+    - [x] Trouble Brewing
+    - [x] Tunnel Delving
+    - [x] Under a Black Sun
+    - [x] Vault of Justice
+    - [x] Welcome Aboard
+    - [x] Witch’s Wrath
