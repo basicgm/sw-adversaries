@@ -1,39 +1,29 @@
 {
-  "name": "star-wars-adversaries",
-  "version": "1.0.0",
-  "description": "",
-  "repository": "https://github.com/stoogoff/sw-adversaries",
-  "main": "gulpfile.js",
-  "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.8.4",
-    "@babel/preset-env": "^7.8.4",
-    "@babel/preset-react": "^7.8.3",
-    "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0",
-    "gulp-clean": "^0.3.2",
-    "gulp-gzip": "^1.4.2",
-    "gulp-jsoncombine": "^1.0.4",
-    "gulp-preprocess": "^3.0.3",
-    "gulp-s3": "^0.3.0",
-    "gulp-sass": "^4.0.2",
-    "merge-stream": "^2.0.0"
-  },
+  "name": "@basicgm/star-wars-adversaries",
+  "version": "2.2.1",
+  "description": "Repository of NPC and Vehicle statistics for Star Wars RPG by EDGE Studio/Fantasy Flight Games",
+  "repository": "github:basicgm/sw-adversaries",
+  "browser": "src/index.html",
   "dependencies": {
-    "@babel/polyfill": "^7.8.3",
-    "nanoajax": "^0.4.3",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-remarkable": "^1.1.1",
-    "systemjs": "^0.19.47",
-    "react-dropzone": "^10.2.2"
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-remarkable": "latest",
+    "react-dropzone": "latest"
+  },
+  "directories": {
+    "lib": "src"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "pushd ../dev; python -m SimpleHTTPServer; popd",
-    "server-live": "pushd ../live; python -m SimpleHTTPServer; popd",
-    "end": "kill $(lsof -ti:8000)"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "author": "Stoo Goff",
-  "license": "ISC"
+  "contributors": [
+    "The Basic GM <eric@basicgm.com> (https://github.com/basicgm)"
+  ],
+  "license": "ISC",
+  "private": true
 }
