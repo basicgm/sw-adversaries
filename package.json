@@ -8,8 +8,9 @@
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-dropzone": "latest",
     "react-remarkable": "latest",
-    "react-dropzone": "latest"
+    "sass": "latest"
   },
   "directories": {
     "lib": "src"
