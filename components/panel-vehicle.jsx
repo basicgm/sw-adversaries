@@ -1,6 +1,5 @@
-
-import React from "react";
-import { hashToArray } from "../lib/utils";
+import React from 'react';
+import {hashToArray} from '../lib/utils';
 
 export default class PanelVehicle extends React.Component {
 	constructor(props) {

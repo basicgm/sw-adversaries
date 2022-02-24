@@ -1,10 +1,9 @@
-
-import React from "react";
-import dispatcher from "lib/dispatcher";
-import * as CONFIG from "lib/config";
-import { sortByProperty } from "lib/list";
-import { id } from "lib/string";
-import { book } from "lib/utils";
+import * as CONFIG from '../lib/config';
+import dispatcher from '../lib/dispatcher';
+import {sortByProperty} from '../lib/list';
+import {id} from '../lib/string';
+import {book} from '../lib/utils';
+import React from 'react';
 
 function titlecase(s) {
 	s = s.replace("_", "");
@@ -40,7 +39,7 @@ export default class TagMenu extends React.Component {
 
 			if(!(type in this.menu)) {
 				this.menu[type] = [];
-			}				
+			}
 
 			this.menu[type].push({
 				text: text,

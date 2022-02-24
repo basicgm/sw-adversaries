@@ -1,19 +1,18 @@
+import * as CONFIG from 'lib/config';
 
-import React from "react";
-import { TextInput, TextArea } from "./input/text";
-import Checkbox from "./input/checkbox";
-import { Select } from "./input/select";
-import PanelListEdit from "./panel-list-edit";
-import PanelTalentEdit from "./panel-talent-edit";
-import PanelWeaponEdit from "./panel-weapon-edit";
-import PanelCode from "./panel-code";
-import PanelSkillEdit from "./panel-skill-edit";
-
-import dispatcher from "lib/dispatcher";
-import * as CONFIG from "lib/config";
-import { characteristics } from "lib/utils";
-import { id, isNumeric, escapeHTML, unescapeHTML, sentenceCase } from "lib/string";
-import { sortByProperty } from "lib/list";
+import dispatcher from 'lib/dispatcher';
+import {sortByProperty} from 'lib/list';
+import {escapeHTML, id, isNumeric, sentenceCase, unescapeHTML} from 'lib/string';
+import {characteristics} from 'lib/utils';
+import React from 'react';
+import Checkbox from './input/checkbox';
+import {Select} from './input/select';
+import {TextArea, TextInput} from './input/text';
+import PanelCode from './panel-code';
+import PanelListEdit from './panel-list-edit';
+import PanelSkillEdit from './panel-skill-edit';
+import PanelTalentEdit from './panel-talent-edit';
+import PanelWeaponEdit from './panel-weapon-edit';
 
 const RANGED = 1;
 const MELEE = 0;

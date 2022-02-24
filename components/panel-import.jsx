@@ -1,13 +1,12 @@
-
-import React from "react";
-import Dropzone from "react-dropzone";
-import LinkList from "components/link-list";
-import RadioList from "./input/radiolist";
-import dispatcher from "lib/dispatcher";
-import * as CONFIG from "lib/config";
-import { after } from "lib/timer";
-import * as Store from "lib/local-store";
-import { pluck, intersectionByProperty, indexOfByProperty, sortByProperty, findByProperty } from "lib/list";
+import LinkList from 'components/link-list';
+import * as CONFIG from 'lib/config';
+import dispatcher from 'lib/dispatcher';
+import {intersectionByProperty, pluck, sortByProperty} from 'lib/list';
+import * as Store from 'lib/local-store';
+import {after} from 'lib/timer';
+import React from 'react';
+import Dropzone from 'react-dropzone';
+import RadioList from './input/radiolist';
 
 
 // error types
@@ -74,7 +73,7 @@ export default class PanelImport extends React.Component {
 			}
 
 			return true;
-		} 
+		}
 
 		let adversaries = this.getImportedAdversaries().filter(filter(CONFLICT_SKIP));
 		let stored = (Store.local.get(CONFIG.ADVERSARY_STORE) || []).filter(filter(CONFLICT_REPLACE));

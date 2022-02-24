@@ -1,6 +1,5 @@
-
-import React from "react";
-import { throttle } from "../../lib/timer";
+import React from 'react';
+import {throttle} from '../../lib/timer';
 
 export default class Filter extends React.Component {
 	constructor(props) {

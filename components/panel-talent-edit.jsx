@@ -1,11 +1,9 @@
-
-import React from "react";
-import { TextInput, TextArea, AutoComplete } from "./input/text";
-import Select from "./input/select";
-import PanelCode from "./panel-code";
-import * as CONFIG from "lib/config";
-import { findByProperty, pluck } from "../lib/list";
-import { isNumeric, id } from "../lib/string";
+import * as CONFIG from '../lib/config';
+import React from 'react';
+import {findByProperty, pluck} from '../lib/list';
+import {id, isNumeric} from '../lib/string';
+import {AutoComplete, TextArea, TextInput} from './input/text';
+import PanelCode from './panel-code';
 
 export default class PanelTalentEdit extends React.Component {
 	constructor(props) {
@@ -159,7 +157,7 @@ export default class PanelTalentEdit extends React.Component {
 		</div>;
 
 		return <div>
-			{ this.props.editing 
+			{ this.props.editing
 				? form
 				:
 				<div>

@@ -1,10 +1,9 @@
-
-import React from "react";
-import Remarkable from "remarkable";
-import { dice, symbolise, minionSkill } from "lib/utils";
-import { id } from "lib/string";
-import { sortByProperty } from "lib/list";
-import * as CONFIG from "lib/config";
+import * as CONFIG from '../lib/config';
+import {sortByProperty} from '../lib/list';
+import {id} from '../lib/string';
+import {dice, minionSkill, symbolise} from '../lib/utils';
+import React from 'react';
+import Remarkable from 'remarkable';
 
 function getWeaponDetails(weapon, character, allSkills, aliveMinions) {
 	if(!("id" in weapon)) {

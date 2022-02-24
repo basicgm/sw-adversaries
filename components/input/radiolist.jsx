@@ -1,5 +1,4 @@
-
-import React from "react";
+import React from 'react';
 
 const checked = <svg><use xlinkHref="#icon-checkbox-checked"></use></svg>;
 const unchecked = <svg><use xlinkHref="#icon-checkbox-unchecked"></use></svg>;

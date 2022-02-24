@@ -1,7 +1,6 @@
-
-import React from "react";
-import { dice, minionSkill } from "lib/utils";
-import * as CONFIG from "lib/config";
+import * as CONFIG from '../lib/config';
+import {dice, minionSkill} from '../lib/utils';
+import React from 'react';
 
 export default class PanelSkill extends React.Component {
 	constructor(props) {

@@ -1,6 +1,4 @@
-
-import React from "react";
-import { id } from "../../lib/string";
+import React from 'react';
 
 // props:
 // handler (function) - callback function when the checkbox is clicked, this passes the object (if set) or label to the handler

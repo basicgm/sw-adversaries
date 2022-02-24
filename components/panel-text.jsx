@@ -1,6 +1,5 @@
-
-import React from "react";
-import Remarkable from "remarkable";
+import React from 'react';
+import Remarkable from 'remarkable';
 
 export default class PanelText extends React.Component {
 	constructor(props) {

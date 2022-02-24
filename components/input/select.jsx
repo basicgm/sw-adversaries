@@ -1,7 +1,6 @@
-
-import React from "react";
-import { id } from "../../lib/string";
-import { sortByProperty } from "../../lib/list";
+import React from 'react';
+import {sortByProperty} from '../../lib/list';
+import {id} from '../../lib/string';
 
 export class Select extends React.Component {
 	handleChange(evt) {

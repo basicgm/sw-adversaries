@@ -1,8 +1,7 @@
-
-import React from "react";
-import dispatcher from "lib/dispatcher";
-import { book } from "lib/utils";
-import * as CONFIG from "lib/config";
+import * as CONFIG from '../lib/config';
+import dispatcher from '../lib/dispatcher';
+import {book} from '../lib/utils';
+import React from 'react';
 
 export default class PanelTag extends React.Component {
 	handler(evt) {

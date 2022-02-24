@@ -1,7 +1,6 @@
-
-import React from "react";
-import { id, isNumeric } from "../../lib/string";
-import { throttle } from "../../lib/timer";
+import React from 'react';
+import {id, isNumeric} from '../../lib/string';
+import {throttle} from '../../lib/timer';
 
 class BaseText extends React.Component {
 	constructor(props) {

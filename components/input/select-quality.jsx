@@ -1,8 +1,6 @@
-
-import React from "react";
-import { parent } from "../../lib/dom";
-import { TextInput } from "./text";
-import { createQuality } from "../../lib/utils";
+import React from 'react';
+import {createQuality} from '../../lib/utils';
+import {TextInput} from './text';
 
 
 export default class SelectQuality extends React.Component {
@@ -15,7 +13,7 @@ export default class SelectQuality extends React.Component {
 		}
 	}
 
-	// notify handling component that the checked state has changed 
+	// notify handling component that the checked state has changed
 	handleSelectionChange(name) {
 		if(this.props.select) {
 			this.props.select(createQuality(this.props.values, name));

@@ -1,10 +1,9 @@
-
-import React from "react";
-import { TextInput } from "./input/text";
-import { Select } from "./input/select";
-import { characteristics } from "lib/utils";
-import dispatcher from "lib/dispatcher";
-import * as CONFIG from "lib/config";
+import * as CONFIG from '../lib/config';
+import dispatcher from '../lib/dispatcher';
+import {characteristics} from '../lib/utils';
+import React from 'react';
+import {Select} from './input/select';
+import {TextInput} from './input/text';
 
 export default class PanelSkillEdit extends React.Component {
 	constructor(props) {

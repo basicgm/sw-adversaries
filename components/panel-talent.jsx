@@ -1,8 +1,7 @@
-
-import React from "react";
-import { id } from "lib/string";
-import { sortByProperty } from "lib/list";
-import { symbolise, statify } from "lib/utils";
+import {sortByProperty} from '../lib/list';
+import {id} from '../lib/string';
+import {statify, symbolise} from '../lib/utils';
+import React from 'react';
 
 export default class PanelTalent extends React.Component {
 	render() {

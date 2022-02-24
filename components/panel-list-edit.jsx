@@ -1,7 +1,5 @@
-
-import React from "react";
-import { parent } from "lib/dom";
-import { symbolise } from "lib/utils";
+import {parent} from 'lib/dom';
+import React from 'react';
 
 export default class PanelListEdit extends React.Component {
 	constructor(props) {
