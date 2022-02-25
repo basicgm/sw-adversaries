@@ -6,8 +6,6 @@ export default function Index() {
       <Head>
         <title>Star Wars: Adversaries</title>
       </Head>
-
-      <h1>Test</h1>
     </div>
   )
 }

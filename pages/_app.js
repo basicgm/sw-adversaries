@@ -1,4 +1,4 @@
-import '../styles/base.sass'
+import '../styles/styles.sass'
 import Layout from '../components/layout'
 
 function MyApp({Component, pageProps}) {
