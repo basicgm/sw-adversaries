@@ -6,6 +6,7 @@
   "browser": "src/index.html",
   "dependencies": {
     "next": "latest",
+    "next-intl": "^2.4.0",
     "react": "latest",
     "react-dom": "latest",
     "react-dropzone": "latest",
